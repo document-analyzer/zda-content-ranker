@@ -1,0 +1,34 @@
+# Ignore compiled Python files
+*.pyc
+
+# Ignore virtual environment files
+venv/
+
+# Ignore log files
+*.log
+
+# Ignore database files
+*.db
+
+# Ignore build files
+build/
+dist/
+
+# Ignore test files
+__pycache__/
+*.py[cod]
+
+# Ignore OS-specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Ignore editor temporary files
+*.swp
+*.swo
+*.tmp
+
+# Ignore IDE files
+.idea/
+*.iml
+*.vscode/
