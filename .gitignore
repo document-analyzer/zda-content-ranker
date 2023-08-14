@@ -1,3 +1,5 @@
+*.pt
+
 # Ignore compiled Python files
 *.pyc
 
