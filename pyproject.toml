@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "content-ranker"
-dynamic = ["version", "dependencies"]
+dynamic = ["version", "dependencies", "optional-dependencies"]
 description = 'Content ranking using ZDA model'
 readme = "README.md"
 requires-python = ">=3.7"
@@ -24,14 +24,20 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
+
+
 #dependencies = []
 [tool.hatch.metadata.hooks.requirements_txt]
 files = ["requirements.txt"]
 
+[tool.hatch.metadata.hooks.requirements_txt.optional-dependencies]
+rest = ["requirements-rest.txt"]
+
+
 [project.urls]
-Documentation = "https://github.com/unknown/content-ranker#readme"
-Issues = "https://github.com/unknown/content-ranker/issues"
-Source = "https://github.com/unknown/content-ranker"
+Documentation = "https://github.com/document-analysis/zda-content-ranker#readme"
+Issues = "https://github.com/document-analysis/zda-content-ranker/issues"
+Source = "https://github.com/document-analysis/zda-content-ranker"
 
 [tool.hatch.version]
 path = "src/content_ranker/__about__.py"
@@ -41,6 +47,7 @@ dependencies = [
   "coverage[toml]>=6.5",
   "pytest",
 ]
+
 [tool.hatch.envs.default.scripts]
 test = "pytest {args:tests}"
 test-cov = "coverage run -m pytest {args:tests}"
