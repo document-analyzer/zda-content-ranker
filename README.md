@@ -183,7 +183,7 @@ tags = model.predict(features)
 ├── pyproject.toml          - pypi config
 ├── README.md
 ├── requirements.txt        - Python requirements
-├── src/ - Source code
+├── src/                    - Source code
 │   └── content_ranker/     - Package containing model code
 │       ├── features/       - Feature extraction  
 │       ├── models/         - PyTorch model definitions
