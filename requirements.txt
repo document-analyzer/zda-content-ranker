@@ -5,7 +5,7 @@ requests
 elasticsearch
 python-json-logger
 beautifulsoup4
-lxml
+selectolax
 regex
 markupsafe
 
