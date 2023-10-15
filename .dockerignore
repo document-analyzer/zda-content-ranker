@@ -2,4 +2,4 @@
 **/.gitignore
 **/venv
 **/Dockerfile
-**/resources
+**/tests

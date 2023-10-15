@@ -2,7 +2,6 @@
 
 # Ignore compiled Python files
 *.pyc
-
 # Ignore virtual environment files
 venv/
 
