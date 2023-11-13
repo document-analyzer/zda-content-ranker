@@ -77,7 +77,6 @@ jobs:
         uses: jpetrucciani/ruff-check@main
 
       - name: Check metadata
-        run: python -m twine check dist/*
         run: pipx run twine check dist/*
 
 
