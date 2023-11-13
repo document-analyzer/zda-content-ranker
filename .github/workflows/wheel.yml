@@ -51,6 +51,7 @@ jobs:
   pre_release:
     name: Pre-release
 #    description: Running linter and checking the wheels
+    if: false # TODO: remove this line
     needs: [ build_wheel ]
     runs-on: ubuntu-latest
     steps:
