@@ -19,7 +19,8 @@ concurrency:
 
 jobs:
   build_wheel:
-    name: Build SDist
+    name: Build Wheel
+#    description: Build SDist with Wheel and also run a test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -32,11 +33,6 @@ jobs:
 
     - name: Setup Python
       run: pip install build pytest-cov
-
-    - uses: actions/download-artifact@v3
-      with:
-        name: artifact
-        path: dist
 
     - name: Build SDist
       run: python -m build
@@ -53,7 +49,8 @@ jobs:
 
 
   pre_release:
-    name: Running linter and checking the wheels
+    name: Pre-release
+#    description: Running linter and checking the wheels
     needs: [ build_wheel ]
     runs-on: ubuntu-latest
     steps:
@@ -81,7 +78,8 @@ jobs:
 
 
   upload_all:
-    name: Upload if release
+    name: Release
+#    description: Upload if release
     needs: [pre_release]
     runs-on: ubuntu-latest
     if: github.event_name == 'release' && github.event.action == 'published'
