@@ -16,11 +16,6 @@ authors = [
 classifiers = [
   "Development Status :: 4 - Beta",
   "Programming Language :: Python",
-  "Programming Language :: Python :: 3.7",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
-  "Programming Language :: Python :: 3.10",
-  "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
@@ -32,6 +27,7 @@ files = ["requirements.txt"]
 
 [tool.hatch.metadata.hooks.requirements_txt.optional-dependencies]
 rest = ["requirements-rest.txt"]
+test = ["requirements-test.txt"]
 
 
 [project.urls]
@@ -127,6 +123,7 @@ unfixable = [
   # Don't touch unused imports
   "F401",
 ]
+exclude = ["third_party"]
 
 [tool.ruff.isort]
 known-first-party = ["content_ranker"]
@@ -155,4 +152,12 @@ exclude_lines = [
   "no cov",
   "if __name__ == .__main__.:",
   "if TYPE_CHECKING:",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
+testpaths = [
+    "tests",
 ]

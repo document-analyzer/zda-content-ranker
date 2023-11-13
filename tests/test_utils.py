@@ -1,7 +1,7 @@
 import pytest
 from pathlib import Path
+from resources import RESOURCES_PATH
 
-from . import RESOURCES_PATH
 from content_ranker.utils import ColorHtml
 
 RESOURCES_PATH_UTILS = RESOURCES_PATH / "utils"
