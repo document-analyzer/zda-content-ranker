@@ -1,0 +1,4 @@
+[submodule "src/content_ranker/third_party/behsan-text-to-vec"]
+	path = src/content_ranker/third_party/behsan-text-to-vec
+	url = https://github.com/document-analyzer/behsan-text-to-vec
+	shallow = true

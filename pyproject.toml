@@ -144,8 +144,8 @@ omit = [
 ]
 
 [tool.coverage.paths]
-content_ranker = ["src/content_ranker", "*/content-ranker/src/content_ranker"]
-tests = ["tests", "*/content-ranker/tests"]
+content_ranker = ["src/content_ranker"]
+tests = ["tests"]
 
 [tool.coverage.report]
 exclude_lines = [
